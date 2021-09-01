@@ -14,3 +14,9 @@ You can run the app using docker:
 ```
 docker-compose up -d
 ```
+
+PS: Below link ,which is in project file, is soldout. Please try with another link.
+
+```
+https://www.etsy.com/in-en/listing/593579116/house-plant-enthusiast-bookmarks
+```
