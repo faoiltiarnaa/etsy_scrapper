@@ -1,0 +1,104 @@
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body, .ui-btn {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    padding: 10px;
+    text-align: center;
+}
+
+.banner {
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 3px;
+    background-color: #eee;
+}
+
+
+
+.error {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    background-color: #fbb;
+}
+
+.product_table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.product_table th {
+    background-color: #009879;
+    color: #ffffff;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.product_table th,
+.product_table td {
+    padding: 12px 15px;
+}
+
+
+.product_table tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.product_table tr:last-of-type {
+    border-bottom: thin solid #009879;
+}
+
+
+.product_card { 
+    border-collapse: collapse;
+    border-spacing: 2px;
+    margin: 25px 0;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    font-weight: 600;
+}
+
+.product_card td:first-of-type {
+    background-color: #009879;
+    color: #ffffff;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.product_card td {
+    padding: 10px;
+}
+
+.product_card tr {
+    border-bottom: thin solid #009879;
+    padding: 12px;
+}
+
+img.product_image{
+    width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}

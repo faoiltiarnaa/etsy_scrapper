@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Etsy Scrapper | sociality.io</title>
+    <link rel="stylesheet" href="static/css/home.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="banner">Etsy Scrapper | sociality.io</h1>
+       
+        <h2><a href="/get_product">Search Product</a></h2>
+
+        <div class="form">
+            <form action="/" method="POST">
+                <input type="text" name="content" id="content">
+                <input type="submit" value="Scrape URL">
+            </form>
+        </div>
+
+        <table class="product_table">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Currency</th>
+                <th>Image</th>
+                <th>Image Preview</th>
+                <th></th>
+            </tr>
+            {% for product in products %}
+                <tr>
+                    <td>{{ product.product_id }}</td>
+                    <td>{{ product.title }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.currency }}</td>
+                    <td>{{ product.image }}</td>
+                    <td>
+                        <img src="{{product.image}}" width="60px">
+                    </td>
+                    <td>
+                        <a href="/delete/{{product.product_id}}">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        {% if error %}
+        <div class="error">
+            <span>Error Message: {{ error }}</span>
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>

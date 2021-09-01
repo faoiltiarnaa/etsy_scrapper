@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Etsy Scrapper | sociality.io</title>
+    <link rel="stylesheet" href="static/css/home.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="banner">Etsy Scrapper | sociality.io</h1>
+        
+        <div class="form">
+            <h2>Get Product by ID</h2>
+            <form action="/get_product" method="POST">
+                <input type="text" name="content" id="content">
+                <input type="submit" value="Get Product">
+            </form>
+
+        </div>
+
+        {% if product %}
+        <div>
+            <table class="product_card">
+            <tr>
+                <td>Product ID</td>
+                <td>{{ product.product_id }}</td>
+            </tr>
+            <tr>
+                <td>Product Title</td>
+                <td>{{ product.title }}</td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>{{ product.price }}</td>
+            </tr>
+            <tr>
+                <td>Currency</td>
+                <td>{{ product.currency }}</td>
+            </tr>
+            <tr>
+                <td>Image Link</td>
+                <td>{{ product.image }}</td>
+            </tr>
+            </table>
+            <img src="{{product.image}}" class="product_image">
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="error">
+            <span>Error Message:</span>
+            <span>{{ error }}</span>
+        </div>
+        {% endif %}
+    
+        <h2><a href="/">Home</a></h2>
+    </div>
+</body>
+</html>
